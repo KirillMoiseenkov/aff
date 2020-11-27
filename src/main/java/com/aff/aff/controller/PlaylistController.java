@@ -32,7 +32,7 @@ public class PlaylistController {
 
     @PostMapping(value = "/create")
     @ApiOperation(value = "Создать плейлист")
-    public void createPlaylist(Playlist playlist) {
+    public void createPlaylist(@RequestBody Playlist playlist) {
        playlistService.savePlaylist(playlist);
     }
 
