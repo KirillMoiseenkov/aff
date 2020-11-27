@@ -13,7 +13,7 @@ public class AudioService {
     private final AudioRepo audioRepo;
 
     public Audio getById(Long id){
-        return audioRepo.findById(id).orElseThrow();
+        return audioRepo.findById(id).get();
     }
 
     public Audio findByPlaylist(Long playlistId, String name){
