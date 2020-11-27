@@ -19,7 +19,7 @@ public class FileService {
     @Autowired
     private final AudioService audioService;
 
-    private static String PATH = "/Users/kirillmoiseenkov/Desktop/file_uploader/";
+    private static String PATH = "/usr/";
 
     public String saveFile(String fileName, MultipartFile file, Long playlistId) {
         Audio audio = new Audio();
