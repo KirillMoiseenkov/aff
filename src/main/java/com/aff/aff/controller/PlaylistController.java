@@ -8,6 +8,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/playlist")
 @RequiredArgsConstructor
@@ -32,5 +34,11 @@ public class PlaylistController {
     @ApiOperation(value = "Создать плейлист")
     public void createPlaylist(Playlist playlist) {
        playlistService.savePlaylist(playlist);
+    }
+
+    @GetMapping(value = "/get/all")
+    @ApiOperation(value = "Поулчить все плейлисты")
+    public List<Playlist> getAllPlaylist(){
+        return playlistService.getAll();
     }
 }

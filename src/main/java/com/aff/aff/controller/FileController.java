@@ -22,7 +22,7 @@ public class FileController {
     public void saveFile(@RequestParam("file") MultipartFile uploadedFile,
                          @PathVariable("fileName") String fileName,
                          @PathVariable("playlistId") Long playlistId){
-        fileService.saveFile(uploadedFile.getOriginalFilename(), uploadedFile,playlistId);
+        fileService.saveFile(fileName, uploadedFile,playlistId);
     }
 
 }

@@ -29,4 +29,8 @@ public class PlaylistService {
     public void savePlaylist(Playlist playlist) {
         playlistRepo.save(playlist);
     }
+
+    public List<Playlist> getAll(){
+        return playlistRepo.findAll();
+    }
 }
